@@ -4,6 +4,8 @@ export const items = [
     description: "Сытость, -2 стресса, -1 здоровье (0 медных)",
     category: "Еда",
     price: 0,
+    image:
+      "https://media.ovkuse.ru/images/step_attachments/c23690bb-b3d7-4f26-8c83-fac3a3beb032/c23690bb-b3d7-4f26-8c83-fac3a3beb032.jpg",
   },
   {
     name: "Еда качества 1",
@@ -638,7 +640,7 @@ export const items = [
     description: "(16 брони) -2 к ловкости",
     category: "Одежда",
     price: 3100,
-    image: "/src/assets/24.png"
+    image: "/src/assets/24.png",
   },
   {
     name: "Латная броня",
