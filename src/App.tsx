@@ -31,7 +31,6 @@ const App = () => {
       sortOrder === "asc" ? a.price - b.price : b.price - a.price
     );
 
-  // Функция для конвертации цены
   const convertPrice = (price: number) => {
     const gold = Math.floor(price / 100);
     const silver = Math.floor((price % 100) / 10);
