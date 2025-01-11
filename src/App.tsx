@@ -48,8 +48,10 @@ const App = () => {
         fullWidth
         onChange={(e) => setSearchTerm(e.target.value)}
       />
+      
+      <div style={{ display: "flex", gap: "12px" }}>
       <FormControl fullWidth variant="outlined" style={{ marginTop: "16px" }}>
-        <InputLabel>Категория</InputLabel>
+        <InputLabel size="small">Категория</InputLabel>
         <Select
           value={selectedCategory}
           onChange={(e) => setSelectedCategory(e.target.value)}
@@ -66,7 +68,7 @@ const App = () => {
         </Select>
       </FormControl>
       <FormControl fullWidth variant="outlined" style={{ marginTop: "16px" }}>
-        <InputLabel>Сортировка по цене</InputLabel>
+        <InputLabel size="small">Сортировка по цене</InputLabel>
         <Select
           value={sortOrder}
           onChange={(e) => setSortOrder(e.target.value)}
@@ -76,6 +78,7 @@ const App = () => {
           <MenuItem value="desc">По убыванию</MenuItem>
         </Select>
       </FormControl>
+      </div>
       <Grid
         container
         spacing={2}
