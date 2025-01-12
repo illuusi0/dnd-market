@@ -115,7 +115,7 @@ const App = () => {
   );
 
   return (
-    <Container>
+    <Container sx={{ position: "absolute", top: 0, left: 0, marginTop: "12px" }}>
       <div
         style={{
           position: "fixed",
