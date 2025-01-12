@@ -1,4 +1,4 @@
-import { useState, ChangeEvent } from "react";
+import { useState, ChangeEvent, useEffect } from "react";
 import {
   Container,
   TextField,
@@ -10,8 +10,10 @@ import {
   CardContent,
   Typography,
   Grid,
+  IconButton,
 } from "@mui/material";
 import PaidIcon from "@mui/icons-material/Paid";
+import ArrowUpwardIcon from "@mui/icons-material/ArrowUpward";
 import { items } from "./data";
 import { Item } from "./types";
 import { SelectChangeEvent } from "@mui/material/Select";
@@ -20,6 +22,7 @@ const App = () => {
   const [searchTerm, setSearchTerm] = useState<string>("");
   const [selectedCategory, setSelectedCategory] = useState<string>("");
   const [sortOrder, setSortOrder] = useState<string>("asc");
+  const [showScrollButton, setShowScrollButton] = useState<boolean>(false);
 
   const categories = [...new Set(items.map((item) => item.category))];
 
@@ -76,7 +79,7 @@ const App = () => {
         {copper > 0 && (
           <span style={{ display: "flex", alignItems: "center", gap: "4px" }}>
             {copper}
-            <PaidIcon fontSize="small" style={{ color: "#8B4513" }} />{" "}
+            <PaidIcon fontSize="small" style={{ color: "#8B4513" }} />
           </span>
         )}
       </span>
@@ -114,8 +117,32 @@ const App = () => {
     </Grid>
   );
 
+  const handleScroll = () => {
+    if (window.scrollY > 300) {
+      setShowScrollButton(true);
+    } else {
+      setShowScrollButton(false);
+    }
+  };
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
-    <Container sx={{ position: "absolute", top: 0, left: 0, marginTop: "12px" }}>
+    <Container
+      sx={{ position: "absolute", top: 0, left: 0, marginTop: "12px" }}
+    >
       <div
         style={{
           position: "fixed",
@@ -177,6 +204,21 @@ const App = () => {
           ))}
         </Grid>
       </div>
+      {showScrollButton && (
+        <IconButton
+          onClick={scrollToTop}
+          style={{
+            position: "fixed",
+            bottom: "30px",
+            right: "20px",
+            backgroundColor: "silver",
+            color: "white",
+            borderRadius: "50%",
+          }}
+        >
+          <ArrowUpwardIcon />
+        </IconButton>
+      )}
     </Container>
   );
 };
