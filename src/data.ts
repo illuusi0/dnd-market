@@ -1,29 +1,33 @@
-export const items = [
+import { Item } from "./types";
+
+export const items: Item[] = [
   {
     name: "Еда качества 0",
     description: "Сытость, -2 стресса, -1 здоровье (0 медных)",
     category: "Еда",
     price: 0,
-    image:
-      "https://media.ovkuse.ru/images/step_attachments/c23690bb-b3d7-4f26-8c83-fac3a3beb032/c23690bb-b3d7-4f26-8c83-fac3a3beb032.jpg",
+    image: "./pripasi_0.jpg",
   },
   {
     name: "Еда качества 1",
     description: "Сытость, -1 стресс (3 медных)",
     category: "Еда",
     price: 3,
+    image: "./pripasi_1.jpg",
   },
   {
     name: "Еда качества 2",
     description: "Сытость (5 медных)",
     category: "Еда",
     price: 5,
+    image: "./pripasi_2.jpg",
   },
   {
     name: "Еда качества 3",
     description: "Сытость, +1 стресс, +1 здоровье, +1 сытость (10 медных)",
     category: "Еда",
     price: 10,
+    image: "./pripasi_3.jpg",
   },
   {
     name: "Еда качества 4",
@@ -31,6 +35,7 @@ export const items = [
       "Сытость, +1 стресс, +1 здоровье, +1 сытость (дважды) (20 медных)",
     category: "Еда",
     price: 20,
+    image: "./pripasi_4.jpg",
   },
   {
     name: "Еда качества 5",
@@ -38,6 +43,7 @@ export const items = [
       "Сытость, +1 стресс, +1 здоровье, +1 сытость (трижды) (40 медных)",
     category: "Еда",
     price: 40,
+    image: "./pripasi_5.jpg",
   },
   {
     name: "Еда качества 6",
@@ -45,6 +51,7 @@ export const items = [
       "Сытость, +1 стресс, +1 здоровье, +1 сытость (четырежды) (80 медных)",
     category: "Еда",
     price: 80,
+    image: "./pripasi_6.jpg",
   },
   {
     name: "Пряности",
@@ -58,6 +65,7 @@ export const items = [
       "При готовке с ними бросок с помехой, но +5 к значению +7 если есть кулинария",
     category: "Еда",
     price: 500,
+    image: "./specii.jpg",
   },
   {
     name: "Табак плохой",
@@ -99,6 +107,7 @@ export const items = [
     description: "(25% -1 стресс)",
     category: "Алкоголь",
     price: 5,
+    image: "./desh_el.png"
   },
   {
     name: "Дешёвое вино",
@@ -147,6 +156,7 @@ export const items = [
     description: "(100% - 2 стресса)",
     category: "Алкоголь",
     price: 40,
+    image: "./el.png"
   },
   {
     name: "Крепленое вино",
@@ -159,6 +169,7 @@ export const items = [
     description: "(50% - 3 стресса, 50% - 1 стресс)",
     category: "Алкоголь",
     price: 40,
+    image: "./viski.jpg",
   },
   {
     name: "Ром",
@@ -195,6 +206,7 @@ export const items = [
     description: "Снимает стресс и боль",
     category: "Медикаменты",
     price: 20,
+    image: "./opium.jpg",
   },
   {
     name: "Мертвояд",
@@ -202,6 +214,7 @@ export const items = [
       "Временное универсальное, снимает эффекты большинства ядов на время",
     category: "Медикаменты",
     price: 10,
+    image: "./mertv.jpg",
   },
   {
     name: "Противоядие",
@@ -232,12 +245,14 @@ export const items = [
     description: "Снимает терапевтически болезни, снижает температуру",
     category: "Медикаменты",
     price: 20,
+    image: "./celeb.jpg",
   },
   {
     name: "Микстура целебная",
     description: "Усиленный сироп, но дает + 1 стресс",
     category: "Медикаменты",
     price: 30,
+    image: "./mikst.jpg",
   },
   {
     name: "Медицинская игла, нить и скальпель",
@@ -250,42 +265,49 @@ export const items = [
     description: "",
     category: "Предметы",
     price: 5,
+    image: "./fakel.jpg",
   },
   {
     name: "Масло для костра",
     description: "",
     category: "Предметы",
     price: 10,
+    image: "./maslo.jpg",
   },
   {
     name: "Масло Дракона",
     description: "",
     category: "Предметы",
     price: 30,
+    image: "./drakona.jpg",
   },
   {
     name: "Болт",
     description: "",
     category: "Предметы",
     price: 1,
+    image: "./bolt.jpg",
   },
   {
     name: "Стрела",
     description: "",
     category: "Предметы",
     price: 5,
+    image: "./strela.jpg",
   },
   {
     name: "Порох",
     description: "",
     category: "Предметы",
     price: 50,
+    image: "./puli.jpg",
   },
   {
     name: "Пули",
     description: "",
     category: "Предметы",
     price: 50,
+    image: "./puli.jpg",
   },
   {
     name: "Серебряные пули",
@@ -406,6 +428,7 @@ export const items = [
     description: "",
     category: "Предметы",
     price: 500,
+    image: "./spal_kach.jpg",
   },
   {
     name: "Утепленный спальник",
@@ -418,6 +441,7 @@ export const items = [
     description: "",
     category: "Предметы",
     price: 500,
+    image: "./palatka_prost.jpg",
   },
   {
     name: "Палатка качественная",
@@ -436,6 +460,7 @@ export const items = [
     description: "(+1 бросок при курении)",
     category: "Предметы",
     price: 300,
+    image: "./trubka_hor.jpg",
   },
   {
     name: "Трубка великолепная",
@@ -448,12 +473,14 @@ export const items = [
     description: "",
     category: "Предметы",
     price: 200,
+    image: "./karti.jpg",
   },
   {
     name: "Игральные кости",
     description: "",
     category: "Предметы",
     price: 50,
+    image: "./kosti.jpg",
   },
   {
     name: "Качественные игральные кости",
@@ -472,6 +499,7 @@ export const items = [
     description: "",
     category: "Предметы",
     price: 250,
+    image: "./verevka.jpg",
   },
   {
     name: "Посуда",
@@ -490,12 +518,14 @@ export const items = [
     description: "Бесценно",
     category: "Предметы",
     price: 0,
+    image: "./oskolki.png",
   },
   {
     name: "Городская одежда",
     description: "",
     category: "Одежда",
     price: 250,
+    image: "./gorod.jpg"
   },
   {
     name: "Дорогая одежда",
@@ -508,6 +538,7 @@ export const items = [
     description: "",
     category: "Одежда",
     price: 1200,
+    image: "./velek_od.jpg"
   },
   {
     name: "Тёплая одежда",
@@ -640,7 +671,7 @@ export const items = [
     description: "(16 брони) -2 к ловкости",
     category: "Одежда",
     price: 3100,
-    image: "/src/assets/24.png",
+    image: "./24.png",
   },
   {
     name: "Латная броня",
@@ -677,27 +708,28 @@ export const items = [
     description: "",
     category: "Оружие",
     price: 700,
+    image: "./prev_bak.jpg",
   },
   {
     name: "Кинжал",
     description: "",
     category: "Оружие",
     price: 50,
-    image: "/src/assets/1.png",
+    image: "./1.png",
   },
   {
     name: "Отличный кинжал",
     description: "",
     category: "Оружие",
     price: 200,
-    image: "/src/assets/2.png",
+    image: "./2.png",
   },
   {
     name: "Превосходный кинжал",
     description: "",
     category: "Оружие",
     price: 500,
-    image: "/src/assets/3.png",
+    image: "./3.png",
   },
   {
     name: "Кремневый пистолет",
@@ -752,14 +784,14 @@ export const items = [
     description: "",
     category: "Оружие",
     price: 100,
-    image: "/src/assets/4.png",
+    image: "./4.png",
   },
   {
     name: "Короткий степной лук",
     description: "",
     category: "Оружие",
     price: 200,
-    image: "/src/assets/4.png",
+    image: "./4.png",
   },
   {
     name: "Тисовый лук",
@@ -780,7 +812,7 @@ export const items = [
     price: 700,
   },
   {
-    name: " Ручной арбалет",
+    name: "Ручной арбалет",
     description: "",
     category: "Оружие",
     price: 1000,
